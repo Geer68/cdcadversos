@@ -13,9 +13,12 @@ article {
     border: 1px solid #f2f8f9;
 }
 
-.article card card-body {
+.card card-body {
     display: flex;
     justify-items: center;
     justify-content: center;
-    background-color: greenyellow;
+}
+
+img {
+    border-radius: 0.5rem;
 }
