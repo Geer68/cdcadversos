@@ -1,0 +1,21 @@
+article {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 350px;
+    background-color: #f2f4f9;
+    border-radius: 6px;
+    padding: 15px 10px;
+    margin: 1rem;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+}
+
+.article card card-body {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+}
