@@ -92,4 +92,54 @@ img {
   margin-left: 5px;
 }
 
+.collapsible {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+.collapsible label {
+  position: relative;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  color: red;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px 0;
+  border-radius: 4px;
+}
+.collapsible label::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  background: url(arrow.svg) no-repeat 0 0;
+}
+.collapsible .collapsible-text {
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3 ease;
+  max-height: 300px;
+  padding-bottom: 25px;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+}
+.collapsible .collapsible-text h2 {
+  margin-bottom: 10px;
+  padding: 15px 15px 0;
+  color: #324280;
+}
+.collapsible .collapsible-text p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */
