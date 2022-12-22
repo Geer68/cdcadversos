@@ -3,7 +3,7 @@ article {
     top: 0px;
     position: relative;
     max-width: 350px;
-    background-color: #f2f4f9;
+    background-color: #f5f5fa;
     border-radius: 6px;
     padding: 15px 10px;
     margin: 1rem;
@@ -61,9 +61,9 @@ img {
     justify-content: center;
 
     p {
-        font-size: large;
+        font-size: 30px;
         font-weight: bold;
-        color: gray;
+        color: rgb(37, 37, 37);
         margin-top: 10px;
     }
 }
@@ -76,22 +76,8 @@ img {
     article {
         display: flex;
         flex-direction: column;
-        min-width: 350px;
+        min-width: 250px;
         min-height: 100px;
-
-        .tittleCard {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            h2 {
-                margin: 0 0 10px;
-                width: auto;
-                justify-content: center;
-                justify-self: center;
-            }
-
-        }
 
         .botones {
             margin-bottom: 10px;
@@ -103,64 +89,144 @@ img {
             }
         }
 
-      
+      .qr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 90%;
+        }
+      }
 
     }
 
     
 }
-.collapsible {
-    max-width: 450px;
-    overflow: hidden;
-    font-weight: 500;
 
-    label {
-        position: relative;
-        font-weight: 600;
-        background: #fff;
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
-        color: red;
-        display: block;
-        margin-bottom: 10px;
-        cursor: pointer;
-        padding: 15px 0;
-        border-radius: 4px;
 
-        &::after{
-            content: "";
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            width: 18px;
-            height: 18px;
-            background: url(arrow.svg) no-repeat 0 0;
-        }
+@mixin button {
+    $color: #80964a;
+  display: inline-block;
+  justify-content: center;
+  padding: .70rem 3rem;
+  border-radius: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  font-weight: bold;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
     }
-
-    .collapsible-text {
-        max-height: 1px;
-        overflow: hidden;
-        border-radius: 4px;
-        line-height: 1.4;
-        position: relative;
-        top: -100%;
-        opacity: 0.5;
-        transition: all 0.3 ease;
-        max-height: 300px;
-        padding-bottom: 25px;
-        background: #fff;
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
-        
-
-        h2 {
-            margin-bottom: 10px;
-            padding: 15px 15px 0;
-            color: #324280;
-        }
-
-        p {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+  }
+}
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+span {
+  display: block;
+  margin-top: 2rem;
+  font-size: .7rem;
+  color: #777;
+  text-decoration: none;
+  a {
+    font-size: .7rem;
+    color: #999;
+    text-decoration:none;
+  }
+}
+.button1 {
+    @include button();
+    &:after {
+        background-color: #45aeae;
+    }
+    &:before {
+        background-color: darken(#45aeae, 15%);
+    }
+}
+.button2 {
+    @include button();
+    &:after {
+        background-color: #e23a59;
+    }
+    &:before {
+        background-color: darken(#e23a59, 15%);
+    }
+}
+.button3 {
+    @include button();
+    &:after {
+        background-color: #fcc82b;
+    }
+    &:before {
+        background-color: darken(#fcc82b, 15%);
+    }
+}
+.button4 {
+    @include button();
+    &:after {
+        background-color: #3e7b97;
+    }
+    &:before {
+        background-color: darken(#3e7b97, 15%);
+    }
+}
+.button5 {
+    @include button();
+    &:after {
+        background-color: #604a96;
+    }
+    &:before {
+        background-color: darken(#604a96, 15%);
+    }
+}
+.button6 {
+    @include button();
+    &:after {
+        background-color: #f7931e;
+    }
+    &:before {
+        background-color: darken(#f7931e, 15%);
     }
 }
