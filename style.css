@@ -20,7 +20,7 @@ article {
 }
 
 img {
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
 }
 
 .suscribe {
@@ -105,23 +105,19 @@ h1 {
   color: #777;
 }
 
-span {
-  display: block;
-  margin-top: 2rem;
-  font-size: 0.7rem;
-  color: #777;
-  text-decoration: none;
-}
-span a {
-  font-size: 0.7rem;
+a {
+  font-size: 0.5rem;
   color: #999;
   text-decoration: none;
+  padding: 0;
+  text-align: center;
 }
 
 .button1 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -132,6 +128,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button1:after {
   content: "";
@@ -170,9 +167,10 @@ span a {
 }
 
 .button2 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -183,6 +181,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button2:after {
   content: "";
@@ -221,9 +220,10 @@ span a {
 }
 
 .button3 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -234,6 +234,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button3:after {
   content: "";
@@ -272,9 +273,10 @@ span a {
 }
 
 .button4 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -285,6 +287,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button4:after {
   content: "";
@@ -323,9 +326,10 @@ span a {
 }
 
 .button5 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -336,6 +340,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button5:after {
   content: "";
@@ -374,9 +379,10 @@ span a {
 }
 
 .button6 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  padding: 0.7rem 3rem;
+  align-items: center;
+  padding: 0 1rem;
   border-radius: 2rem;
   color: #fff;
   text-transform: uppercase;
@@ -387,6 +393,7 @@ span a {
   z-index: 1;
   text-decoration: none;
   font-weight: bold;
+  min-height: 80px;
 }
 .button6:after {
   content: "";
@@ -422,6 +429,12 @@ span a {
 }
 .button6:before {
   background-color: #c26c07;
+}
+
+@media (max-width: 770px) {
+  img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
