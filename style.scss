@@ -87,6 +87,7 @@ article {
         flex-direction: column;
         min-width: 350px;
         min-height: 455px;
+        box-shadow: rgb(60, 61, 61) 0px 20px 30px -10px;
 
         .botones {
             margin-bottom: 10px;
@@ -216,7 +217,6 @@ a {
         background-color: darken(#45aeae, 15%);
     }
 }
-
 .button2 {
     @include button();
 
@@ -228,7 +228,6 @@ a {
         background-color: darken(#e23a59, 15%);
     }
 }
-
 .button3 {
     @include button();
 
@@ -240,7 +239,6 @@ a {
         background-color: darken(#fcc82b, 15%);
     }
 }
-
 .button4 {
     @include button();
 
@@ -252,7 +250,6 @@ a {
         background-color: darken(#3e7b97, 15%);
     }
 }
-
 .button5 {
     @include button();
 
@@ -264,7 +261,6 @@ a {
         background-color: darken(#604a96, 15%);
     }
 }
-
 .button6 {
     @include button();
 
@@ -274,6 +270,83 @@ a {
 
     &:before {
         background-color: darken(#f7931e, 15%);
+    }
+}
+.button7 {
+    @include button();
+
+    &:after {
+        background-color: #da2b2b;
+    }
+
+    &:before {
+        background-color: darken(#da2b2b, 15%);
+    }
+}
+.button8 {
+    @include button();
+
+    &:after {
+        background-color: #2b3cda;
+    }
+
+    &:before {
+        background-color: darken(#2b3cda, 15%);
+    }
+}
+.button9 {
+    @include button();
+
+    &:after {
+        background-color: #67c41b;
+    }
+
+    &:before {
+        background-color: darken(#67c41b, 15%);
+    }
+}
+.button10 {
+    @include button();
+
+    &:after {
+        background-color: #df77c8;
+    }
+
+    &:before {
+        background-color: darken(#df77c8, 15%);
+    }
+}
+.button11 {
+    @include button();
+
+    &:after {
+        background-color: #757575;
+    }
+
+    &:before {
+        background-color: darken(#757575, 15%);
+    }
+}
+.button12 {
+    @include button();
+
+    &:after {
+        background-color: #408d29;
+    }
+
+    &:before {
+        background-color: darken(#408d29, 15%);
+    }
+}
+.button13 {
+    @include button();
+
+    &:after {
+        background-color: #f15073;
+    }
+
+    &:before {
+        background-color: darken(#f15073, 15%);
     }
 }
 
