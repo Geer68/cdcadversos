@@ -1,16 +1,17 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 article {
   display: block;
   top: 0px;
   position: relative;
   max-width: 350px;
-  background-color: #f5f5fa;
+  background-color: #f4f4f4;
   border-radius: 6px;
   padding: 15px 10px;
   margin: 1rem;
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-  border: 1px solid #f2f8f9;
+  border: 1px solid #f4f4f4;
   min-width: 349px;
 }
 
@@ -77,7 +78,7 @@ article {
   flex-direction: column;
   min-width: 350px;
   min-height: 455px;
-  box-shadow: rgb(60, 61, 61) 0px 20px 30px -10px;
+  box-shadow: rgb(60, 61, 61) 0px 20px 25px -15px;
 }
 .card-wrap article .botones {
   margin-bottom: 10px;
@@ -871,12 +872,14 @@ a {
   padding: 10px;
   padding-bottom: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-bottom p {
   float: left;
   font-size: 14px;
   word-spacing: 1.5px;
-  text-transform: capitalize;
 }
 .footer-bottom p a {
   color: #44bae8;
@@ -889,24 +892,66 @@ a {
   font-weight: 200;
 }
 
-.footerMenu {
-  justify-content: center;
-  display: flex;
-  width: 100%;
+body {
+  background-color: rgba(17, 156, 93, 0.05);
 }
-.footerMenu ul {
+
+.social-container {
   display: flex;
+  justify-items: center;
+  width: auto;
+  text-align: center;
+  margin-right: 0px;
+  padding: 0px;
 }
-.footerMenu ul li {
-  padding-right: 10px;
+
+.social-icons {
+  padding: 0px;
+  list-style: none;
+  margin: 15px;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  font-size: x-large;
+  color: #fff;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
   display: block;
+  background: linear-gradient(45deg, #119c5d, #085c2b);
+  transition: all 265ms ease-out;
 }
-.footerMenu ul li a {
-  color: #cfd2d6;
-  text-decoration: none;
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
 }
-.footerMenu ul li a:hover {
-  color: #27bcda;
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #119c5d;
+  background: -webkit-linear-gradient(45deg, #119c5d, #085c2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,14 +3,14 @@ article {
     top: 0px;
     position: relative;
     max-width: 350px;
-    background-color: #f5f5fa;
+    background-color: #f4f4f4;
     border-radius: 6px;
     padding: 15px 10px;
     margin: 1rem;
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
-    border: 1px solid #f2f8f9;
+    border: 1px solid #f4f4f4;
     min-width: 349px;
 }
 
@@ -87,7 +87,7 @@ article {
         flex-direction: column;
         min-width: 350px;
         min-height: 455px;
-        box-shadow: rgb(60, 61, 61) 0px 20px 30px -10px;
+        box-shadow: rgb(60, 61, 61) 0px 20px 25px -15px;
 
         .botones {
             margin-bottom: 10px;
@@ -405,12 +405,14 @@ a {
     padding: 10px;
     padding-bottom: 30px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     p {
         float: left;
         font-size: 14px;
         word-spacing: 1.5px;
-        text-transform: capitalize;
 
         a {
             color: #44bae8;
@@ -426,26 +428,82 @@ a {
     }
 }
 
-.footerMenu {
-    justify-content: center;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+$timing        : 265ms;
+$iconColor     : #119c5d;
+$accent        : #085c2b;
+$bluefade      : #0043E0;
+$gradient      : #00B5F5;
+
+@mixin transformScale($size: 1) {
+    transform: scale($size);
+    -ms-transform: scale($size);
+    -webkit-transform: scale($size);
+}
+
+body {
+    background-color: rgba($iconColor, 0.05);
+}
+
+.social-container {
     display: flex;
-    width: 100%;
+    justify-items: center;
+    width: auto;
+    text-align: center;
+    margin-right: 0px;
+    padding: 0px;
+}
 
-    ul {
-        display: flex;
+.social-icons {
+    padding: 0px;
+    list-style: none;
+    margin: 15px;
+  
+    li {
+        display: inline-block;
+        margin: 0.15em;
+        position: relative;
+        font-size: 1.2em;
 
-        li {
-            padding-right: 10px;
+    }
+
+    i {
+        font-size: x-large;
+        color: #fff;
+        position: absolute;
+        top: 19px;
+        left: 19px;
+        transition: all $timing ease-out;
+    }
+
+    a {
+        display: inline-block;
+      
+        &:before {
+            @include transformScale();
+            content: " ";
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
             display: block;
-
-            a {
-                color: #cfd2d6;
-                text-decoration: none;
-
-                &:hover {
-                    color: #27bcda;
-                }
-            }
+            background: linear-gradient(45deg, $iconColor, $accent);
+            transition: all $timing ease-out;
+        }
+        
+        &:hover:before {
+            transform: scale(0);
+            transition: all $timing ease-in;
+        }
+        
+        &:hover i {
+            @include transformScale(2.2);
+            color: $iconColor;
+            background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all $timing ease-in;
         }
     }
+  
 }
